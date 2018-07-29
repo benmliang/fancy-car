@@ -1,3 +1,5 @@
+import breakpoint from 'styled-components-breakpoint';
+
 import {
   styledDiv,
   styledWrapper,
@@ -5,7 +7,13 @@ import {
 } from '../../../common/styles.common';
 
 export const CarCardDivWrapper = styledWrapper.extend`
+  width: 100%;
+  ${breakpoint('tablet')`
   width: 33%;
+  `}
+  ${breakpoint('desktop')`
+  width: 25%;
+  `}
 `;
 
 export const CarCardDiv = styledDiv.extend`
