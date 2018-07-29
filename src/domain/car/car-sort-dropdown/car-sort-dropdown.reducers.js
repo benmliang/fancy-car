@@ -1,9 +1,4 @@
-import { UPDATE_CARS_SORTBY } from '../car.constants';
-
-const CAR_LIST_SORTBY = {
-  NAME: 'name',
-  AVAILABILITY: 'available'
-};
+import { UPDATE_CARS_SORTBY, CAR_LIST_SORTBY } from '../car.constants';
 
 const DEFAULT_CAR_LIST_SORTBY = CAR_LIST_SORTBY.NAME;
 

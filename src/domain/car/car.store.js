@@ -1,3 +1,5 @@
+import { CAR_AVAILABILITY } from './car.constants';
+
 export const initialState = {
   carList: [
     {
@@ -6,6 +8,7 @@ export const initialState = {
       name: 'My Fancy Car 1',
       make: 'Audi',
       model: 'A3',
+      availability: CAR_AVAILABILITY.OUT_OF_STOCK,
       year: 2018
     },
     {
@@ -14,6 +17,7 @@ export const initialState = {
       name: 'My Fancy Car 2',
       make: 'Audi',
       model: 'A3',
+      availability: CAR_AVAILABILITY.OUT_OF_STOCK,
       year: 2018
     },
     {
@@ -22,6 +26,7 @@ export const initialState = {
       name: 'My Fancy Car 3',
       make: 'Audi',
       model: 'A3',
+      availability: CAR_AVAILABILITY.OUT_OF_STOCK,
       year: 2018
     },
     {
@@ -31,7 +36,7 @@ export const initialState = {
       make: 'Audi',
       model: 'A3',
       year: 2018,
-      available: true
+      availability: CAR_AVAILABILITY.IN_DELEARSHIP
     },
     {
       id: 5,
@@ -39,7 +44,8 @@ export const initialState = {
       name: 'My Fancy Car 5',
       make: 'Audi',
       model: 'A3',
-      year: 2018
+      year: 2018,
+      availability: CAR_AVAILABILITY.IN_DELEARSHIP
     },
     {
       id: 6,
@@ -47,6 +53,7 @@ export const initialState = {
       name: 'My Fancy Car 6',
       make: 'Audi',
       model: 'A3',
+      availability: CAR_AVAILABILITY.UNAVAILABLE,
       year: 2018
     },
     {
@@ -55,6 +62,7 @@ export const initialState = {
       name: 'My Fancy Car 7',
       make: 'Audi',
       model: 'A3',
+      availability: CAR_AVAILABILITY.UNAVAILABLE,
       year: 2018
     }
   ],

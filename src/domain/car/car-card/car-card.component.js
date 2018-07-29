@@ -9,11 +9,13 @@ import {
   CarCardYear
 } from './car-card.styles';
 
+import { CAR_AVAILABILITY } from '../car.constants';
+
 const CarCardAvailability = () => {
   return <button>buy</button>;
 };
 
-export const CarCard = ({ img, name, make, model, year, id, available }) => (
+export const CarCard = ({ img, name, make, model, year, id, availability }) => (
   <CarCardDivWrapper>
     <CarCardDiv>
       <CarCardImageWrapper>
@@ -22,7 +24,9 @@ export const CarCard = ({ img, name, make, model, year, id, available }) => (
       <CarCardName>{name}</CarCardName>
       <CarCardDescription>{`${make} ${model}`}</CarCardDescription>
       <CarCardYear>{year}</CarCardYear>
-      {available && <CarCardAvailability />}
+      {availability === CAR_AVAILABILITY.IN_DELEARSHIP && (
+        <CarCardAvailability />
+      )}
     </CarCardDiv>
   </CarCardDivWrapper>
 );
