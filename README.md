@@ -1,8 +1,10 @@
 ## Todo
 
--[ ] request sequence
--[ ] CarsService
--[ ] AvailabilityService (Protential N+1)
+- [] Request sequence
+
+- [] CarsService
+
+- [] AvailabilityService (Protential N+1)
 
 ## Lesson Learned.
 
