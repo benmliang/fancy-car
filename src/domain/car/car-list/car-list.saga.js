@@ -4,8 +4,8 @@ import {
   FETCH_CARS_START,
   FETCH_CARS_FAILED,
   FETCH_CARS_SUCCEEDED
-} from './car-list.constant';
-import { CarsService } from './car-list.service';
+} from '../car.constants';
+import { CarsService } from '../car.service';
 
 export function* carFetchSaga() {
   yield takeLatest(FETCH_CARS_START, fetchCars);

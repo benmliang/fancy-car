@@ -1,10 +1,10 @@
-## Todo
+## Start here
 
-- [] Request sequence
+Run the command `$ npm i; npm start`
 
-- [] CarsService
+## Protential Risk
 
-- [] AvailabilityService (Protential N+1)
+AvailabilityService: Protential N+1
 
 ## Lesson Learned.
 

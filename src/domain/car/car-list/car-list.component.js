@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import { CarCard } from '../car-card';
+import { CarCardContainer } from '../car-card';
 import { CarListDiv } from './car-list.styles';
 import { CarSortDropdownContainer } from '../car-sort-dropdown';
 
@@ -17,7 +17,7 @@ export class CarList extends React.Component {
         <CarSortDropdownContainer />
 
         <CarListDiv>
-          {carList.map(car => <CarCard key={car.id} {...car} />)}
+          {carList.map(car => <CarCardContainer key={car.id} {...car} />)}
         </CarListDiv>
       </div>
     );

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { CarList } from './car-list.component';
 import { carListSelectors } from './car-list.selectors';
-import { fetchCars } from './car-list.actions';
+import { fetchCars } from '../car.actions';
 
 const mapDispatchToProps = dispatch => ({
   fetchCars: () => dispatch(fetchCars())

@@ -17,7 +17,7 @@ const sortedCarListSelector = createSelector(
     if (sortBy === CAR_LIST_SORTBY.AVAILABILITY) {
       return sort(
         car =>
-          car[CAR_LIST_SORTBY.AVAILABILITY] === CAR_AVAILABILITY.IN_DELEARSHIP
+          car[CAR_LIST_SORTBY.AVAILABILITY] === CAR_AVAILABILITY.IN_DEALERSHIP
       )(cars);
     }
 
