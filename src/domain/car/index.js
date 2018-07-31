@@ -1,15 +1,23 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import createSagaMiddleware from 'redux-saga';
+
 import { reducers } from './car.reducers';
 import { initialState } from './car.store';
 import { CarListContainer } from './car-list';
-import logger from 'redux-logger';
+import { rootSaga } from './car.saga';
 
-const store = createStore(reducers, initialState, applyMiddleware(logger));
-console.log('store: ', store.getState());
-global.store = store;
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(
+  reducers,
+  initialState,
+  applyMiddleware(sagaMiddleware, logger)
+);
+
+sagaMiddleware.run(rootSaga);
 
 export const ConnectedCarListContainer = () => (
   <Provider store={store}>

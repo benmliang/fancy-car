@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import { UPDATE_CARS_SORTBY } from './car.actions';
 import { carsSortByReducer } from './car-sort-dropdown';
+import { carsListReducer } from './car-list';
 
 export const reducers = combineReducers({
   sortBy: carsSortByReducer,
   carAvailabilities: (a = {}) => a,
-  carList: (a = [], b) => console.log('a: ', a, b) || a
+  carList: carsListReducer
 });

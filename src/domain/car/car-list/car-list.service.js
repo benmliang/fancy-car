@@ -1,7 +1,7 @@
 import { fetchV1 } from '../../../common/utils/fetch';
 import { getCars } from './car-list.mock';
 
-const getAll = () => {
+export const getAll = () => {
   return fetchV1('http://api.fancycar.com/v1/cars');
 };
 
