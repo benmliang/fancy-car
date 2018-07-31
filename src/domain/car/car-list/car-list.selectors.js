@@ -10,10 +10,6 @@ const sortedCarListSelector = createSelector(
   carListSelector,
   sortBySelector,
   (cars, sortBy) => {
-    console.log(
-      'sortBy === CAR_LIST_SORTBY.AVAILABILITY: ',
-      sortBy === CAR_LIST_SORTBY.AVAILABILITY
-    );
     if (sortBy === CAR_LIST_SORTBY.NAME) {
       return sort(car => car[CAR_LIST_SORTBY.NAME])(cars);
     }

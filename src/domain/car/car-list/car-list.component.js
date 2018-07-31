@@ -1,11 +1,12 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
+
 import { CarCard } from '../car-card';
 import { CarListDiv } from './car-list.styles';
 import { CarSortDropdownContainer } from '../car-sort-dropdown';
 
 export class CarList extends React.Component {
   componentDidMount() {
-    console.log('this.props: ', this.props);
     this.props.fetchCars();
   }
   render() {
@@ -22,3 +23,8 @@ export class CarList extends React.Component {
     );
   }
 }
+
+CarList.propTypes = {
+  fetchCars: PropTypes.function,
+  carList: PropTypes.array
+};
