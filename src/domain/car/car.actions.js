@@ -7,6 +7,7 @@ export const fetchCars = () => ({
   type: FETCH_CARS_START
 });
 
-export const fetchCarAvailability = () => ({
-  type: FETCH_CAR_AVAILABILITY_START
+export const fetchCarAvailability = id => ({
+  type: FETCH_CAR_AVAILABILITY_START,
+  payload: { id }
 });

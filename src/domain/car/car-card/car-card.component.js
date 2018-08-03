@@ -19,9 +19,9 @@ const CarCardAvailability = () => {
 
 export class CarCard extends React.Component {
   componentDidMount() {
-    console.log('this.props: ', this.props);
-    this.props.fetchCarAvailability();
+    this.props.fetchCarAvailability(this.props.id);
   }
+
   render() {
     const { img, name, make, model, year, availability } = this.props;
     return (
@@ -43,7 +43,7 @@ export class CarCard extends React.Component {
 }
 
 CarCard.propTypes = {
-  fetchCarAvailability: PropTypes.function,
+  fetchCarAvailability: PropTypes.func,
   img: PropTypes.string,
   name: PropTypes.string,
   make: PropTypes.string,

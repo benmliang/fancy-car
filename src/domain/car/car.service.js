@@ -15,5 +15,5 @@ export const CarsService = {
 };
 
 export const AvailabilityService = {
-  getById: id => mockedGetCarAvailability(id)
+  getById: mockedGetCarAvailability
 };
